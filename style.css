@@ -1,5 +1,12 @@
 input
 {
-	border:2px solid pink;
-	font-size:10px;
+	font-size:12px;
+}
+
+form{
+	border:2px solid indigo;
+	padding:5px;	
+	margin:10px auto;
+	width:300px;
+	background:brown;
 }
