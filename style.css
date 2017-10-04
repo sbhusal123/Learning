@@ -3,6 +3,26 @@ input
 	font-size:12px;
 }
 
+ul li{
+	list-style:none;
+	display:inline-block;
+	background:magenta;
+	margin:2px;
+	border-radius:2px;
+	padding:5px;
+	color:indigo;
+}
+.navbar{
+	background:indigo;
+	margin:-10px;
+	margin-top:-15px;
+}
+
+ul li:hover{
+	background:pink;
+	cursor:pointer;
+}
+
 form{
 	border:2px solid indigo;
 	padding:5px;	
