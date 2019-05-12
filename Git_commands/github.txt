@@ -1,0 +1,121 @@
+-> First create the github account
+-> Install github 
+   for linux: sudo apt-get install gitub
+   for windows download the github and install
+
+
+Beginners Command:
+
+*) Initialize the branch:
+   git init
+
+*) add the files changed/modified files
+   git add <filename> or git add . (for all changed file)
+
+*) commit the changesL
+   git commit -m "<message to convey what has changed>"
+
+*) view the logs(commits and logs of the repo):
+   git log (Note: Only the log of current branch will be shown)
+
+
+*) To download the repository from the github:
+
+git clone <url>. 
+-> Here url is not the normal web address of the web page. Instead the 
+   address of 'Clone Or Download.
+-> "Use SSH" address to clone otherwise it'll ask for the username and password.
+
+-> While cloning normally only one of the branch is cloned. Such issue can be     
+   solved: # link https://stackoverflow.com/questions/3999541/after-git-clone-i-do-not-see-my-branch
+
+-> Normally if the branch is not cloned the branch named same as of the remote 
+   branch can be created: git branch <actual_uncloned_branch_name>
+
+*) Pushing the code to the online repository:
+   -> First create a repository.
+   -> Then clone the repo.
+   -> add and commit 
+   -> Now to push:  git push -u origin <branch_name> 
+      Caution: pushing is performed for the specific branch only. So make sure
+      you are on right branch. i.e switch to proper branch.
+
+Q) What is git 'origin'?
+->In Git, "origin" is a shorthand name for the remote repository that a project was originally cloned from. 
+  More precisely, it is used instead of that original repository's URL - and thereby makes referencing much
+  easier.
+
+-----> To uderstand the basic workflow : https://www.youtube.com/watch?v=3a2x1iJFJWc <-----------
+
+
+
+*) Clearing the files from staging area:(staging is desc in above video)
+   git reset
+
+  Or:
+   git reset HEAD ---> removes all files from the staging area
+   git add <files, that are required to be committed>
+   git commit -m "<commit message>"
+   git push -u origin <branch>
+   
+
+Branching commands(Required for collaoration):
+
+->Actually branching allows multiple developers to work in the same project
+  and managing the code independently.
+
+Working criterta(Workflow):
+-> One developer works in one branch and pushes the work to remote repo.
+-> Another developer updates his branch (to match previous branch of the first developer)
+   and makes changes and perform push operation to the repo.
+
+*) To create a branch:
+   git checkout -b <branch_name>
+   After perfoming above ,you'll be switched to the "branch" you created.
+
+*) View the branches:
+   git branch
+
+
+*) To update the current branch to match with the remote one:
+   Procedure:
+   i->   switch to the desired branch: git checkout <branch_name>
+   ii->  git pull
+
+*) Merge the branches:
+
+  Here term merging means combining the changes from one branch to another branch.
+  https://www.youtube.com/watch?v=0iuqXh0oojo
+  
+  Procedure:
+  -> switch to the branch where you'll merge the code from another
+     branch: git checkout <your_work_branch>
+     Work branch means working branch for a particular developer.
+
+   -> Now merge the code from other branch to switched brach.
+      git merge <other_branch_aside_your_current_branch>
+  
+
+*) Solving Merge conflicts:
+   https://www.youtube.com/watch?v=__cR7uPBOIk
+
+Caution: Never merge/commit to the branch of other's developer.
+
+
+
+Common Problems:
+
+1) Git push requires username and password
+
+  A common mistake is cloning using the default (HTTPS) instead of SSH. 
+  You can correct this by going to your repository, clicking "Clone or download", 
+  then clicking the "Use SSH" button above the URL field and updating the URL of your origin remote like this:
+
+  git remote set-url origin git@github.com:username/repo.git
+
+
+
+
+
+
+
